@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-label="USB Powered-B">
+  <rect width="240" height="140" rx="14" fill="#f7fafc"/>
+  <path d="M70 106V55l23-23h54l23 23v51z" fill="#c5ceda" stroke="#273244" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M89 86V62l13-12h36l13 12v24z" fill="#202a38"/>
+  <circle cx="101" cy="96" r="6" fill="#d89b24"/>
+  <circle cx="139" cy="96" r="6" fill="#d89b24"/>
+  <path d="M120 42v22m-11-11h22" stroke="#d89b24" stroke-width="6" stroke-linecap="round"/>
+  <text x="120" y="128" text-anchor="middle" font-family="Arial" font-size="15" fill="#273244">Powered-B</text>
+</svg>

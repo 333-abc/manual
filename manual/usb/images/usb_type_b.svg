@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-label="USB Type-B">
+  <rect width="240" height="140" rx="14" fill="#f7fafc"/>
+  <path d="M76 104V54l24-24h40l24 24v50z" fill="#c5ceda" stroke="#273244" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M94 88V60l13-12h26l13 12v28z" fill="#202a38"/>
+  <rect x="106" y="64" width="12" height="16" rx="2" fill="#d8dde5"/>
+  <rect x="122" y="64" width="12" height="16" rx="2" fill="#d8dde5"/>
+  <text x="120" y="126" text-anchor="middle" font-family="Arial" font-size="16" fill="#273244">Type-B</text>
+</svg>
