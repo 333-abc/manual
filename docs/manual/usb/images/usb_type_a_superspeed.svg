@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-label="USB 3.x Type-A">
+  <rect width="240" height="140" rx="14" fill="#f7fafc"/>
+  <rect x="42" y="34" width="156" height="72" rx="8" fill="#c5ceda" stroke="#273244" stroke-width="6"/>
+  <rect x="58" y="48" width="124" height="44" rx="4" fill="#1469b8"/>
+  <rect x="72" y="57" width="13" height="24" rx="2" fill="#d8dde5"/>
+  <rect x="101" y="57" width="13" height="24" rx="2" fill="#d8dde5"/>
+  <rect x="130" y="57" width="13" height="24" rx="2" fill="#d8dde5"/>
+  <rect x="159" y="57" width="13" height="24" rx="2" fill="#d8dde5"/>
+  <text x="120" y="126" text-anchor="middle" font-family="Arial" font-size="16" fill="#273244">3.x Type-A</text>
+</svg>
