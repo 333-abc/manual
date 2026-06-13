@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-label="USB Micro-AB">
+  <rect width="240" height="140" rx="14" fill="#f7fafc"/>
+  <path d="M52 54h136l-9 38H61z" fill="#c5ceda" stroke="#273244" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M72 64h96l-4 18H76z" fill="#202a38"/>
+  <path d="M91 73h58" stroke="#d8dde5" stroke-width="5" stroke-linecap="round"/>
+  <text x="120" y="124" text-anchor="middle" font-family="Arial" font-size="16" fill="#273244">Micro-AB</text>
+</svg>

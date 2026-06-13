@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" role="img" aria-label="USB Mini-A">
+  <rect width="240" height="140" rx="14" fill="#f7fafc"/>
+  <path d="M64 46h112l-12 50H76z" fill="#c5ceda" stroke="#273244" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M82 59h76l-7 24H88z" fill="#202a38"/>
+  <rect x="97" y="64" width="10" height="14" rx="2" fill="#d8dde5"/>
+  <rect x="116" y="64" width="10" height="14" rx="2" fill="#d8dde5"/>
+  <rect x="135" y="64" width="10" height="14" rx="2" fill="#d8dde5"/>
+  <text x="120" y="124" text-anchor="middle" font-family="Arial" font-size="16" fill="#273244">Mini-A</text>
+</svg>

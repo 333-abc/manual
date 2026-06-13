@@ -1,0 +1,425 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USB 鎺ュ彛绫诲瀷姹囨€昏〃</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #5b6475;
+      --line: #dbe1ec;
+      --head: #eef3fb;
+      --accent: #0f6f78;
+      --accent-2: #b56b14;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+
+    header {
+      padding: 34px 28px 22px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 4vw, 42px);
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 1100px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    main {
+      padding: 24px 28px 44px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 3px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 16px 30px rgba(30, 44, 70, 0.08);
+    }
+
+    table {
+      width: 100%;
+      min-width: 1660px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+      text-align: left;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--head);
+      color: #1d2a3d;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    tbody tr:hover {
+      background: #f9fbff;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .pic {
+      width: 230px;
+      min-width: 230px;
+    }
+
+    .pic img {
+      display: block;
+      width: 210px;
+      height: 140px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #f7fafc;
+    }
+
+    .empty-image {
+      display: grid;
+      width: 210px;
+      height: 140px;
+      place-items: center;
+      padding: 16px;
+      border: 1px dashed #b8c2d2;
+      border-radius: 6px;
+      background: #f7fafc;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .name {
+      min-width: 160px;
+      font-weight: 700;
+    }
+
+    .cn {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .status {
+      display: inline-block;
+      min-width: 58px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #e9f6f5;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .legacy {
+      background: #fff4e6;
+      color: var(--accent-2);
+    }
+
+    .rare {
+      background: #f0eef8;
+      color: #6653a4;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      max-width: 1180px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      header,
+      main {
+        padding: 18px;
+      }
+
+      .table-wrap {
+        box-shadow: none;
+      }
+
+      th {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>USB 鎺ュ彛绫诲瀷姹囨€昏〃</h1>
+    <p class="intro">
+      鏈〃鎸?USB-IF 瀹樻柟杩炴帴鍣ㄥ鏃忎笌甯歌鍙樹綋鏁寸悊锛岃鐩?Standard銆丮ini銆丮icro銆丼uperSpeed銆丳owered-B銆乀ype-C 绛?USB 鐗╃悊鎺ュ彛銆傛瘡琛屽悓鏃剁粰鍑哄叕澶村拰姣嶅ご涓夎鍥惧弬鑰冨浘锛沀SB 2.0銆乁SB 3.x銆乁SB4 閫氬父鎻忚堪鐨勬槸鍗忚/閫熺巼锛屼笉涓€瀹氫唬琛ㄦ柊鐨勬帴鍙ｅ褰€?    </p>
+  </header>
+
+  <main>
+    <div class="legend" aria-label="鍥句緥">
+      <span class="tag">甯哥敤锛氱幇鍦ㄤ粛澶ч噺浣跨敤鎴栨帹鑽?/span>
+      <span class="tag">鏃ф锛氭棫璁惧甯歌锛屾柊澧炶璁′竴鑸笉鎺ㄨ崘</span>
+      <span class="tag">灏戣锛氭爣鍑嗕腑瀛樺湪锛屼絾娑堣垂浜у搧杈冨皯</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>鍏ご涓夎鍥?/th>
+            <th>姣嶅ご涓夎鍥?/th>
+            <th>鎺ュ彛鍚嶇О</th>
+            <th>涓枃甯哥敤鍚?/th>
+            <th>鎺ュ彛鏂瑰悜/褰㈢姸</th>
+            <th>甯歌鍗忚</th>
+            <th>鍏稿瀷璁惧</th>
+            <th>鐘舵€?/th>
+            <th>璇嗗埆瑕佺偣</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_type_a_male_3views\.png" alt="USB Type-A 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_type_a_female_3views\.png" alt="USB Type-A 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Type-A<span class="cn">Standard-A</span></td>
+            <td>USB-A / 澶у彛</td>
+            <td>鎵佸钩鐭╁舰锛屽崟闈㈡彃鍏?/td>
+            <td>USB 1.1 / 2.0 / 3.x</td>
+            <td>鐢佃剳銆佸厖鐢靛櫒銆乁 鐩樸€侀敭榧?/td>
+            <td><span class="status">甯哥敤</span></td>
+            <td class="note">鏈€甯歌涓绘満绔帴鍙ｏ紱USB 3.x 鐗堟湰鍐呴儴甯歌钃濊壊鑳惰姱鎴栨洿澶氳Е鐐广€?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_type_a_superspeed_male_3views\.png" alt="USB 3.x Type-A 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_type_a_superspeed_female_3views\.png" alt="USB 3.x Type-A 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB 3.x Type-A<span class="cn">SuperSpeed Standard-A</span></td>
+            <td>USB 3.0/3.1/3.2 A 鍙?/td>
+            <td>Type-A 澶栧舰锛岃Е鐐瑰鍔?/td>
+            <td>USB 3.x锛屽悜涓嬪吋瀹?USB 2.0</td>
+            <td>鐢佃剳銆佹墿灞曞潪銆佺Щ鍔ㄧ‖鐩樼洅</td>
+            <td><span class="status">甯哥敤</span></td>
+            <td class="note">澶栧３鍜?USB-A 鐩稿悓锛岄潬鍐呴儴瑙︾偣鍜岄鑹插尯鍒嗭紝涓嶆槸鍏ㄦ柊澶栧舰銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_type_b_male_3views\.png" alt="USB Type-B 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_type_b_female_3views\.png" alt="USB Type-B 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Type-B<span class="cn">Standard-B</span></td>
+            <td>USB-B / 鎵撳嵃鏈哄彛</td>
+            <td>杩戞柟褰紝涓婅鍒囪</td>
+            <td>USB 1.1 / 2.0</td>
+            <td>鎵撳嵃鏈恒€佹壂鎻忎华銆佷华鍣ㄣ€侀煶棰戣澶?/td>
+            <td><span class="status">甯哥敤</span></td>
+            <td class="note">甯歌浜庡璁剧锛岀嚎缂嗗彟涓€绔€氬父鏄?USB-A銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_type_b_superspeed_male_3views\.png" alt="USB 3.x Type-B 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_type_b_superspeed_female_3views\.png" alt="USB 3.x Type-B 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB 3.x Type-B<span class="cn">SuperSpeed Standard-B</span></td>
+            <td>USB 3.0 B 鍙?/td>
+            <td>USB-B 涓婃柟鍔犻珮</td>
+            <td>USB 3.x锛屽甫 USB 2.0 鍏煎瑙︾偣</td>
+            <td>楂橀€熸墦鍗版満銆佺‖鐩樺簳搴с€侀噰闆嗚澶?/td>
+            <td><span class="status rare">灏戣</span></td>
+            <td class="note">姣旀櫘閫?USB-B 鏇撮珮锛屾櫘閫?USB-B 绾块€氬父涓嶈兘鎻掑叆 USB 3.x B 鎻掑ご浣嶃€?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_powered_b_male_3views\.png" alt="USB Powered-B 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_powered_b_female_3views\.png" alt="USB Powered-B 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Powered-B<span class="cn">Powered Standard-B</span></td>
+            <td>渚涚數 B 鍙?/td>
+            <td>USB-B 鍙樹綋锛岄澶栫數婧愯Е鐐?/td>
+            <td>USB 2.0 / 涓撶敤渚涚數鍙樹綋</td>
+            <td>POS 璁惧銆佸伐涓氬璁?/td>
+            <td><span class="status rare">灏戣</span></td>
+            <td class="note">涓哄璁炬彁渚涙洿楂樹緵鐢佃兘鍔涳紝娑堣垂鐢靛瓙涓緢灏戣銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_mini_a_male_3views\.png" alt="USB Mini-A 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_mini_a_female_3views\.png" alt="USB Mini-A 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Mini-A<span class="cn">Mini-A</span></td>
+            <td>Mini-A</td>
+            <td>灏忓瀷姊舰锛屼笉瀵圭О</td>
+            <td>USB 2.0 / OTG 鏃╂湡鏂规</td>
+            <td>鏃╂湡鐩告満銆丳DA銆丱TG 璁惧</td>
+            <td><span class="status legacy">鏃ф</span></td>
+            <td class="note">瀹樻柟鏃╂湡灏忓瀷鍖栨帴鍙ｏ紝鍚庢潵鍩烘湰琚?Micro-USB 鍜?USB-C 鍙栦唬銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_mini_b_male_3views\.png" alt="USB Mini-B 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_mini_b_female_3views\.png" alt="USB Mini-B 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Mini-B<span class="cn">Mini-B 5-pin</span></td>
+            <td>Mini-USB / T 鍙?/td>
+            <td>灏忓瀷姊舰锛屼袱渚ф枩瑙?/td>
+            <td>USB 2.0</td>
+            <td>鏃╂湡鐩告満銆丮P3銆佸鑸华銆佸紑鍙戞澘</td>
+            <td><span class="status legacy">鏃ф</span></td>
+            <td class="note">姣?Micro-B 鍘氾紝寰堝鑰佸紡鏁扮爜璁惧浠嶈兘瑙佸埌銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><span class="empty-image">鏃犲崟鐙?Mini-AB 鍏ご锛涗娇鐢?Mini-A 鎴?Mini-B 鍏ご</span></td>
+            <td class="pic"><img src="\.\./usb/images/usb_mini_ab_female_3views\.png" alt="USB Mini-AB 姣嶅骇淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Mini-AB<span class="cn">Mini-A/B OTG Receptacle</span></td>
+            <td>Mini-AB OTG 姣嶅骇</td>
+            <td>鍏煎 Mini-A 鍜?Mini-B 鎻掑ご</td>
+            <td>USB 2.0 OTG</td>
+            <td>鏃╂湡 OTG 鎵嬫満銆丳DA銆佺浉鏈?/td>
+            <td><span class="status legacy">鏃ф</span></td>
+            <td class="note">鐢ㄤ簬璁惧鍙湪涓绘満/澶栬瑙掕壊涔嬮棿鍒囨崲鐨勬棭鏈?OTG 璁捐銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_a_male_3views\.png" alt="USB Micro-A 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_a_female_3views\.png" alt="USB Micro-A 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Micro-A<span class="cn">Micro-A</span></td>
+            <td>Micro-A</td>
+            <td>寰堣杽鐨勭煩褰紝鍗曚晶閫犲瀷</td>
+            <td>USB 2.0 OTG</td>
+            <td>鏃╂湡 OTG 涓绘満绾裤€佸祵鍏ュ紡璁惧</td>
+            <td><span class="status rare">灏戣</span></td>
+            <td class="note">Micro-USB 瀹舵棌涓殑 A 鍨嬶紝瀹為檯娑堣垂璁惧杩滃皯浜?Micro-B銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_b_male_3views\.png" alt="USB Micro-B 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_b_female_3views\.png" alt="USB Micro-B 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Micro-B<span class="cn">Micro-B 2.0</span></td>
+            <td>Micro-USB / 瀹夊崜鏃у彛</td>
+            <td>寰堣杽鐨勬褰紝鍗曢潰鎻掑叆</td>
+            <td>USB 2.0</td>
+            <td>鏃ф墜鏈恒€佸厖鐢靛疂銆佽€虫満銆佸紑鍙戞澘</td>
+            <td><span class="status legacy">鏃ф</span></td>
+            <td class="note">2010 骞翠唬闈炲父鏅強锛涙槗纾ㄦ崯锛屾柟鍚戜笉鍙弽鎻掋€?/td>
+          </tr>
+          <tr>
+            <td class="pic"><span class="empty-image">鏃犲崟鐙?Micro-AB 鍏ご锛涗娇鐢?Micro-A 鎴?Micro-B 鍏ご</span></td>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_ab_female_3views\.png" alt="USB Micro-AB 姣嶅骇淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Micro-AB<span class="cn">Micro-A/B OTG Receptacle</span></td>
+            <td>Micro-AB OTG 姣嶅骇</td>
+            <td>鍏煎 Micro-A 鍜?Micro-B 鎻掑ご</td>
+            <td>USB 2.0 OTG</td>
+            <td>鏃╂湡 OTG 璁惧銆佸紑鍙戞澘</td>
+            <td><span class="status rare">灏戣</span></td>
+            <td class="note">姣嶅骇鍙帴鍙?A/B 涓ょ被 Micro 鎻掑ご锛屽父鐢ㄤ簬 OTG 瑙掕壊璇嗗埆銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_b_superspeed_male_3views\.png" alt="USB 3.x Micro-B 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_b_superspeed_female_3views\.png" alt="USB 3.x Micro-B 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB 3.x Micro-B<span class="cn">SuperSpeed Micro-B</span></td>
+            <td>鍙岃仈 Micro-B / 绉诲姩纭洏鍙?/td>
+            <td>Micro-B 鏃佽竟骞跺垪楂橀€熻Е鐐瑰尯</td>
+            <td>USB 3.x锛屽吋瀹?USB 2.0 Micro-B 绾?/td>
+            <td>绉诲姩纭洏銆侀儴鍒嗘墜鏈恒€侀噰闆嗙洅</td>
+            <td><span class="status legacy">鏃ф</span></td>
+            <td class="note">鐪嬭捣鏉ュ儚涓や釜灏忓彛骞跺湪涓€璧凤紱鏇剧粡鏄珮閫熺Щ鍔ㄧ‖鐩樺父瑙佹帴鍙ｃ€?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_a_superspeed_male_3views\.png" alt="USB 3.x Micro-A 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_a_superspeed_female_3views\.png" alt="USB 3.x Micro-A 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB 3.x Micro-A<span class="cn">SuperSpeed Micro-A</span></td>
+            <td>楂橀€?Micro-A</td>
+            <td>Micro-A 鍔犻珮閫熸墿灞曞尯</td>
+            <td>USB 3.x OTG</td>
+            <td>宸ョ▼璁惧銆佸皯閲忎富鏈虹 OTG 閰嶄欢</td>
+            <td><span class="status rare">灏戣</span></td>
+            <td class="note">鏍囧噯瀛樺湪浣嗘瀬灏戝湪鏅€氭秷璐逛骇鍝佷腑鍑虹幇銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><span class="empty-image">鏃犲崟鐙?SuperSpeed Micro-AB 鍏ご锛涗娇鐢?SuperSpeed Micro-A 鎴?Micro-B 鍏ご</span></td>
+            <td class="pic"><img src="\.\./usb/images/usb_micro_ab_superspeed_female_3views\.png" alt="USB 3.x Micro-AB 姣嶅骇淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB 3.x Micro-AB<span class="cn">SuperSpeed Micro-AB</span></td>
+            <td>楂橀€?Micro-AB OTG</td>
+            <td>鍏煎 SuperSpeed Micro-A/B</td>
+            <td>USB 3.x OTG</td>
+            <td>灏戦噺 OTG/宓屽叆寮忛珮閫熻澶?/td>
+            <td><span class="status rare">灏戣</span></td>
+            <td class="note">鐢ㄤ簬楂橀€?OTG 鐨勬瘝搴х被鍨嬶紝鐜板疄涓笉甯歌銆?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/usb_type_c_male_3views\.png" alt="USB Type-C 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/usb_type_c_female_3views\.png" alt="USB Type-C 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">USB Type-C<span class="cn">USB-C</span></td>
+            <td>Type-C / C 鍙?/td>
+            <td>鍦嗚闀挎き鍦嗭紝姝ｅ弽鍙彃</td>
+            <td>USB 2.0 / 3.x / USB4 / Thunderbolt 3/4/5 鍙叡鐢ㄥ褰?/td>
+            <td>鎵嬫満銆佺數鑴戙€佸钩鏉裤€佹墿灞曞潪銆佹樉绀哄櫒</td>
+            <td><span class="status">甯哥敤</span></td>
+            <td class="note">澶栧舰鐩稿悓涓嶄唬琛ㄩ€熺巼銆佽棰戣緭鍑烘垨渚涚數鑳藉姏鐩稿悓锛岄渶瑕佺湅璁惧鍜岀嚎缂嗚鏍笺€?/td>
+          </tr>
+          <tr>
+            <td class="pic"><img src="\.\./usb/images/lightning_male_3views\.png" alt="Lightning 鍏ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="pic"><img src="\.\./usb/images/lightning_female_3views\.png" alt="Lightning 姣嶅ご淇渚ч潰姝ｉ潰涓夎鍥?></td>
+            <td class="name">Apple Lightning<span class="cn">闈?USB 鏍囧噯鎺ュ彛</span></td>
+            <td>鑻规灉 Lightning</td>
+            <td>灏忓瀷鍙岄潰鎻掑叆</td>
+            <td>甯搁€氳繃绾跨紗杩炴帴 USB 涓绘満锛屼絾鎺ュ彛鏈韩涓嶆槸 USB 鐗╃悊鏍囧噯</td>
+            <td>鏃ф iPhone銆乮Pad銆丄irPods 閰嶄欢</td>
+            <td><span class="status legacy">鏃ф</span></td>
+            <td class="note">瀹规槗琚綊鍒扳€淯SB 鍏呯數鍙ｂ€濓紝涓ユ牸璇翠笉鏄?USB 鍙ｏ紱杩欓噷浣滀负杈ㄨ瘑琛ュ厖鍒楀嚭銆?/td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      璇存槑锛氭湰椤垫暣鐞嗙殑鏄父瑙?USB 鐗╃悊杩炴帴鍣ㄥ褰紝鍥剧墖涓烘湰鍦颁繚瀛樼殑瀹炵墿椋庢牸涓夎鍥惧弬鑰冨浘锛屼笉浣滀负鏈烘灏哄鍥句娇鐢ㄣ€備笉鍚屽巶鍟嗗彲鑳戒娇鐢ㄤ笉鍚岄鑹层€佸澹炽€佸浐瀹氳剼鍜岄槻姘寸粨鏋勶紱杩欎簺閫氬父灞炰簬鏈烘瀹炵幇宸紓锛屼笉绠楁柊鐨?USB 鎺ュ彛绫诲瀷銆?    </footer>
+  </main>
+</body>
+</html>
+
